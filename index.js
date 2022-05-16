@@ -13,8 +13,8 @@ app.use(express.json())
 
 const client_id = process.env.CLIENT_ID
 const client_secret = process.env.CLIENT_SECRET
-const redirect_uri = "http://localhost:3000/dashboard"
-const scope =  ['playlist-modify-public', 'user-modify-playback-state', 'user-read-currently-playing', 'user-read-email', 'user-read-private', 'user-read-playback-position', 'user-top-read', 'user-follow-modify', 'user-follow-read', 'user-read-currently-playing'].join(" ") 
+const redirect_uri = "https://magic-playlist-frontend.vercel.app/dashboard"
+const scope =  ['playlist-modify-public', 'user-read-email', 'user-read-private'].join(" ") 
 
 app.get("/", (req, res) => {
     res.send("Hello world CORS enabled")
